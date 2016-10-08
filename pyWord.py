@@ -22,7 +22,7 @@ def openWord(fileaddr):
 	fileaddr = fileaddr.replace("\\","/")
 	if(os.path.exists(fileaddr)):
 		word = wordApp.Documents.Open(fileaddr)
-		#wordInit(True,False)
+		wordInit(True,False)
 	else:
 		print("文件打开失败,请检查路径是否正确,应改为/")
 
@@ -32,7 +32,6 @@ def wordInit(visible=False,displayAlerts=False):
 	Documents = wordApp.Documents
 	ActiveDocument = wordApp.ActiveDocument
 	Selection = wordApp.Selection
-	setWordVisible(visible,displayAlerts)
 
 # 后台运行,不显示,不警告
 def setWordVisible(visible=True,displayAlerts=False):

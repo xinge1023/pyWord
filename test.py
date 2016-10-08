@@ -3,8 +3,8 @@ import os
 from  pyWord   import *
 
 def handleWord(fileAddr):
+    setWordVisible(True,False)
     openWord(fileAddr)
-    wordInit(True,False)
     closeWord()
 
 def listFile(dir):    
@@ -16,8 +16,9 @@ def listFile(dir):
                 if(fileType == "doc" or fileType == "docx" or fileType == "wps"):
                     handleWord(fileAddr)
 
+
 #word目录
-wordDir = "C:\Documents and Settings\Administrator\桌面\word";
+wordDir = "C:\Documents and Settings\Administrator\桌面\汇总";
 listFile(wordDir)        
 #放到最后
 quitWord()
